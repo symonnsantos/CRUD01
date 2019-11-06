@@ -1,0 +1,28 @@
+<br><br>
+<div class="container">
+    <div class="form-row">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Editar</th>
+                    <th>Deletar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of clientes">
+                    <th scope="row">{{ c.id }}</th>
+                    <th>{{ c.nome }}</th>
+                    <th>{{ c.email }}</th>
+                    <th>{{ c.telefone }}</th>
+                    <th><button class="btn btn-primary" (click)="edit(c.id)">Editar</button></th>
+                    <th><button class="btn btn-danger" (click)="delete()">Deletar</button></th>
+                </tr>
+            </tbody>            
+        </table>
+        <button class="btn btn-primary" (click)="new()">Criar novo</button>
+    </div>
+</div>
